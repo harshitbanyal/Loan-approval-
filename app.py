@@ -5,7 +5,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
 
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder, StandardScaler
@@ -55,11 +54,6 @@ st.dataframe(df.head())
 # Visualization
 # ------------------------------
 st.subheader("📈 Data Visualization")
-
-fig, ax = plt.subplots()
-df["loan_status"].value_counts().plot(kind='bar', ax=ax)
-ax.set_title("Loan Approval Count")
-st.pyplot(fig)
 
 # ------------------------------
 # Preprocessing
